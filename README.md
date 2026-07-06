@@ -33,8 +33,8 @@ Scored with a fuzzy-match threshold of 0.85. For images where a model degenerate
 | Time per page | — | **9–20 s** | 31–130 s | 32–52 s (968 s when looping) |
 | Peak VRAM | — | ~6.7 GB | 8.16 GB | 8.09 GB |
 
-Per-image details: [docs/VLM_OCR_COMPARISON_JP.md](docs/VLM_OCR_COMPARISON_JP.md) (Japanese).
-Tesseract baseline evaluation: [docs/TESSERACT_BASELINE_JP.md](docs/TESSERACT_BASELINE_JP.md) (Japanese).
+Per-image details: [docs/VLM_OCR_COMPARISON.md](docs/VLM_OCR_COMPARISON.md).
+Tesseract baseline evaluation: [docs/TESSERACT_BASELINE.md](docs/TESSERACT_BASELINE.md).
 
 ## Key Findings
 
@@ -57,8 +57,8 @@ Choose by use case.
 ```
 ├── README.md
 ├── docs/
-│   ├── VLM_OCR_COMPARISON_JP.md   # Detailed comparison report (Japanese)
-│   └── TESSERACT_BASELINE_JP.md   # Tesseract baseline evaluation (Japanese)
+│   ├── VLM_OCR_COMPARISON.md      # Detailed comparison report
+│   └── TESSERACT_BASELINE.md      # Tesseract baseline evaluation
 ├── samples/
 │   ├── ocr/                       # 5 input images (vocabulary book spreads)
 │   └── ocr-expected/              # Ground-truth JSON (8 entries × 5 images)
