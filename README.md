@@ -114,6 +114,3 @@ ds-env\Scripts\python.exe scripts\eval_ocr.py samples\ocr-expected results\deeps
 ds-env\Scripts\python.exe scripts\eval_ocr.py samples\ocr-expected results\unlimited-ocr
 ```
 
-## 注意
-
-`samples/ocr/` の画像は市販の英単語帳を撮影したものです。著作権保護のため、このリポジトリは**プライベート**での運用を前提としています。
