@@ -1,9 +1,10 @@
-# OCR Model Comparison — PaddleOCR vs DeepSeek-OCR (v1/Ollama) vs DeepSeek-OCR-2 vs baidu/Unlimited-OCR
+# OCR Model Comparison — PaddleOCR / PaddleOCR-VL / DeepSeek-OCR (v1 & v2) / baidu Unlimited-OCR
 
 A benchmark of local-GPU OCR models on smartphone photos of an English vocabulary book (two-page spreads).
 The existing Tesseract-based OCR pipeline did not deliver sufficient accuracy, so these models were evaluated as replacement candidates.
 
 - **[PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)** (PP-OCRv6 medium, `lang=japan`) — classic det+rec pipeline via paddlepaddle-gpu
+- **[PaddleOCR-VL-1.6](https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.6)** (~1B, BF16) — layout-aware VLM document-parsing pipeline (`PaddleOCRVL`)
 - **[deepseek-ai/DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR)** (3.3B, F16) — VLM, run via **Ollama** (`deepseek-ocr:latest`)
 - **[deepseek-ai/DeepSeek-OCR-2](https://huggingface.co/deepseek-ai/DeepSeek-OCR-2)** (~3.4B, BF16) — VLM, run via transformers
 - **[baidu/Unlimited-OCR](https://huggingface.co/baidu/Unlimited-OCR)** (~3.3B, BF16) — VLM, run via transformers
@@ -24,15 +25,15 @@ The existing Tesseract-based OCR pipeline did not deliver sufficient accuracy, s
 
 Scored with a fuzzy-match threshold of 0.85. For images where a model degenerated into a repetition loop, the score from a re-run with alternate settings is used.
 
-| Metric | Tesseract only | PaddleOCR | DeepSeek-OCR (v1/Ollama) | DeepSeek-OCR-2 | Unlimited-OCR |
-|---|---|---|---|---|---|
-| Headwords (word-recall) | 21/40 | **40/40** | **40/40** | **40/40** | 39/40 |
-| Japanese meanings | 0% | **28/40** | 8/40 | **28/40** | 27/40 |
-| English examples | 0% | 2/40 * | 36/40 | **38/40** | 36/40 |
-| Japanese translations | 0% | 2/40 * | 3/40 | 15/40 | **20/40** |
-| Repetition loops | — | **0/5** | **0/5** | 1/5 | 1/5 |
-| Time per page | — | **1.2–2.0 s** | 9–20 s | 31–130 s | 32–52 s (968 s when looping) |
-| Peak VRAM | — | minimal | ~6.7 GB | 8.16 GB | 8.09 GB |
+| Metric | Tesseract only | PaddleOCR | PaddleOCR-VL-1.6 | DeepSeek-OCR (v1/Ollama) | DeepSeek-OCR-2 | Unlimited-OCR |
+|---|---|---|---|---|---|---|
+| Headwords (word-recall) | 21/40 | **40/40** | **40/40** | **40/40** | **40/40** | 39/40 |
+| Japanese meanings | 0% | 28/40 | **36/40** | 8/40 | 28/40 | 27/40 |
+| English examples | 0% | 2/40 * | **40/40** | 36/40 | 38/40 | 36/40 |
+| Japanese translations | 0% | 2/40 * | **20/40** | 3/40 | 15/40 | **20/40** |
+| Repetition loops | — | **0/5** | **0/5** | **0/5** | 1/5 | 1/5 |
+| Time per page | — | **1.2–2.0 s** | 76–141 s | 9–20 s | 31–130 s | 32–52 s (968 s when looping) |
+| Peak VRAM | — | minimal | ~1B model (fits easily) | ~6.7 GB | 8.16 GB | 8.09 GB |
 
 \* PaddleOCR's low example-sentence scores are caused by line fragmentation, not misrecognition: it outputs raw text lines with no reading-order/layout reconstruction, so multi-line sentences in the multi-column layout come out interleaved and fail the sentence-level match. Character-level recognition is actually good (headwords 40/40, meanings 28/40 — tied with the best VLM).
 
@@ -41,7 +42,8 @@ Tesseract baseline evaluation: [docs/TESSERACT_BASELINE.md](docs/TESSERACT_BASEL
 
 ## Key Findings
 
-0. **PaddleOCR is in a different speed class** (1.2–2.0 s per page, ~20 MB models, tiny VRAM) and its character recognition is strong (headwords 40/40, meanings 28/40). But it has no layout understanding: sentences spanning multiple lines across the multi-column layout come out as interleaved fragments, so example sentences are unusable without a layout-aware post-processing step (sorting detection boxes into columns/rows).
+0. **PaddleOCR-VL-1.6 is the overall accuracy winner**: meanings 36/40 (best), English examples 40/40 (perfect), Japanese translations 20/40 (tied best), zero loops. Its layout analysis reconstructs reading order, fixing exactly what breaks classic PaddleOCR. Two caveats: it is the slowest here (76–141 s per page with the default Paddle backend — the official vLLM server backend is reported to be much faster), and on 2 of 5 pages its table reconstruction misassigned cells, collapsing the Japanese-translation column (IMG_4123: 1/8).
+1. **Classic PaddleOCR is in a different speed class** (1.2–2.0 s per page, ~20 MB models, tiny VRAM) and its character recognition is strong (headwords 40/40, meanings 28/40). But it has no layout understanding: sentences spanning multiple lines across the multi-column layout come out as interleaved fragments, so example sentences are unusable without a layout-aware post-processing step (sorting detection boxes into columns/rows).
 1. **Headwords and English examples are near-perfect across all three VLMs** — a dramatic improvement over Tesseract (21/40), practical even without dictionary correction.
 2. **For faithful transcription of Japanese text, the two transformers models (v2 / Unlimited) are clearly superior.** v1/Ollama tends to paraphrase and re-translate the Japanese fields, and frequently mixes in Chinese characters, making it unsuitable for verbatim extraction (meaning 8/40, exampleJa 3/40).
 3. **v1/Ollama stands out for speed and stability** (9–20 s per page, zero loops, setup is just `ollama pull`).
@@ -53,9 +55,10 @@ Tesseract baseline evaluation: [docs/TESSERACT_BASELINE.md](docs/TESSERACT_BASEL
 
 Choose by use case.
 
-- **If you need every field (Japanese meanings and translations, verbatim)**: **baidu/Unlimited-OCR** (recommended over DeepSeek-OCR-2 by a small margin). Cap `max_length=8192` and add a guard that retries with the base config (1024 px, crop disabled) when repetition is detected.
-- **If headwords + English examples are enough (Japanese filled in by dictionary correction)**: **DeepSeek-OCR (v1) + Ollama is the strongest option** — word-recall 40/40, no loops, ~10 s per page, and by far the lowest operational cost.
-- **If speed is paramount and you only need headwords + meanings (or you are willing to build box-coordinate post-processing)**: **PaddleOCR** — 1–2 s per page and headwords 40/40 / meanings 28/40 out of the box. With column-aware sorting of the detection boxes, its example-sentence scores would likely improve substantially.
+- **Best accuracy for every field (Japanese meanings and translations, verbatim)**: **PaddleOCR-VL-1.6** — meanings 36/40, English examples 40/40, translations 20/40, no loops. Accept 76–141 s per page with the default backend, or deploy the official vLLM server backend for speed. Watch for occasional table-cell misassignment on complex spreads.
+- **If VL is too slow and you still want verbatim fields**: **baidu/Unlimited-OCR** (recommended over DeepSeek-OCR-2 by a small margin). Cap `max_length=8192` and add a guard that retries with the base config (1024 px, crop disabled) when repetition is detected.
+- **If headwords + English examples are enough (Japanese filled in by dictionary correction)**: **DeepSeek-OCR (v1) + Ollama** — word-recall 40/40, no loops, ~10 s per page, and by far the lowest operational cost.
+- **If speed is paramount and you only need headwords + meanings (or you are willing to build box-coordinate post-processing)**: **classic PaddleOCR** — 1–2 s per page and headwords 40/40 / meanings 28/40 out of the box.
 
 ## Repository Layout
 
@@ -69,6 +72,7 @@ Choose by use case.
 │   └── ocr-expected/              # Ground-truth JSON (8 entries × 5 images)
 ├── results/
 │   ├── paddleocr/                 # PaddleOCR raw output (result.md, one text line per detection)
+│   ├── paddleocr-vl/              # PaddleOCR-VL-1.6 output (<name>.md + <name>_res.json)
 │   ├── deepseek-ocr-v1-ollama/    # DeepSeek-OCR (v1) raw output via Ollama (result.md)
 │   ├── deepseek-ocr-2/            # DeepSeek-OCR-2 raw output (result.mmd + detection-box overlay)
 │   │   ├── IMG_4125-freeocr/      # Loop retry (Free OCR prompt)
@@ -79,6 +83,7 @@ Choose by use case.
     ├── run_ocr_bench.py           # Batch inference for the two transformers models
     ├── ollama_ocr.py              # Batch inference via Ollama (deepseek-ocr)
     ├── paddle_ocr.py              # Batch inference via PaddleOCR
+    ├── paddle_vl_ocr.py           # Batch inference via PaddleOCR-VL (doc parsing)
     ├── retry_one.py               # Re-run a single image with alternate settings
     └── eval_ocr.py                # Scoring against the ground-truth JSON
 ```
@@ -95,7 +100,16 @@ paddle-env\Scripts\python.exe scripts\paddle_ocr.py samples\ocr results\paddleoc
 paddle-env\Scripts\python.exe scripts\eval_ocr.py samples\ocr-expected results\paddleocr
 ```
 
-### 0b. DeepSeek-OCR (v1) — Ollama (easiest)
+### 0b. PaddleOCR-VL-1.6 (best accuracy)
+
+```powershell
+# same paddle-env as above, plus:
+uv pip install --python paddle-env\Scripts\python.exe -U "paddleocr[doc-parser]>=3.6.0"
+paddle-env\Scripts\python.exe scripts\paddle_vl_ocr.py samples\ocr results\paddleocr-vl v1.6
+paddle-env\Scripts\python.exe scripts\eval_ocr.py samples\ocr-expected results\paddleocr-vl
+```
+
+### 0c. DeepSeek-OCR (v1) — Ollama (easiest)
 
 ```powershell
 ollama pull deepseek-ocr

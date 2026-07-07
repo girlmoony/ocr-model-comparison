@@ -1,0 +1,278 @@
+{
+    "input_path": "C:\\Users\\thatb\\OneDrive\\デスクトップ\\workspace\\github\\simple_apps\\tango-quest-pwa\\samples\\ocr\\IMG_4124.jpeg",
+    "page_index": null,
+    "page_count": null,
+    "width": 4032,
+    "height": 3024,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "2 Section 12 名同题 形容词",
+            "block_bbox": [
+                646,
+                171,
+                1241,
+                266
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    642.39453125,
+                    196.09567260742188
+                ],
+                [
+                    1237.538330078125,
+                    164.95437622070312
+                ],
+                [
+                    1241.304931640625,
+                    236.9375
+                ],
+                [
+                    646.1611328125,
+                    268.07879638671875
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>plot[pla](.)</td><td>(小説などの)筋; 陰謀▶ hatch a plot against ～～に対して陰謀をたくらむ▶ (…すること)をたくらむ (to do)</td><td>800</td><td>1500</td><td>1500</td></tr><tr><td>sculpture[sk↓pl](.)</td><td>彫刻 (作品)▶ create [make] a sculpture 彫刻を作る▶ sculptor 彫刻家</td><td>The plot of this detective novel is too complicated to understand.</td><td colspan=\"2\">この探徳小説の脳は複雑すぎて理解できない。</td></tr><tr><td>tablet[tæblə]</td><td>タブレット (型情報端末) ; 錠剤 ; 平板▶ vitamin tablets ビタミン錠剤</td><td>You can see Michelangelo&#x27;s famous sculpture in St. Peter&#x27;s in Vatican City.</td><td colspan=\"2\">バチカン市国のサンビエトロ大聖堂ではミケランジェロの有名な彫刻を見ることができる。</td></tr><tr><td colspan=\"2\">形容詞編</td><td>Some think that it is more convenient to read novels on a tablet.</td><td colspan=\"2\">タブレットで小説を読むほうが便利だと考える人がいる。</td></tr><tr><td>dense[dens]▶ 1179</td><td>密集した, 密度の高い; (霧などが)濃い▶ density 密度, 密集▶ population density 人口密度▶ densely 密集して, ぎっしりと</td><td>We had trouble walking through a dense crowd of people.</td><td colspan=\"2\">私たちは密集した人混みの中を通り抜けるのに苦労した。</td></tr><tr><td>exotic[ˈɛɡzɒt]▶ 1180</td><td>外来の; 異国風の▶ 通例, 西欧人から見て「異国風の」を意味する。▶ exotic cultures 外来文化▶ exoticism 異国趣味</td><td>The zoo has an exhibition of rare and exotic animals.</td><td colspan=\"2\">その動物園は珍しい外来の動物を公開している。</td></tr><tr><td>acid[æ&#x27;sɪd]▶ 1181</td><td>酸性の; 酸っぱい; 辛辣な▶ acid rain 「酸性雨」▶ an acid remark 辛辣な意見▶ 酸; 酸っぱい物▶ acidity 酸度</td><td>It is not certain that acid rain is caused by air pollution.</td><td colspan=\"2\">酸性雨が大気汚染によって引き起こされるのかはっきりしない。</td></tr><tr><td>bitter[bɪtər]▶ 1182</td><td>苦い, つらい; 辛辣な; 怒りっぽい▶ taste bitter 苦い味がする▶ bitterly 濃いひどく, 激しく▶ I was bitterly shocked. 私はひどくショックを受けた。</td><td>He had the bitter experience of fighting in the war.</td><td colspan=\"2\">彼は戦争で戦うというつらい経験をした。</td></tr><tr><td>sensible[sensəbl]▶ 1183</td><td>賢明な; 実用的な; 顕著な▶ It is sensible (of ~) to do「(~が)…するとは賢明である」▶ sensitive 「敏感な; 感じやすい」と区別。▶ sensibility 名 感受性; (鋭い)感性▶ sense and sensibility 分別と多感</td><td>She made the sensible decision of consulting her lawyer.</td><td colspan=\"2\">彼女は弁護士に相談するという賢明な決断をした。</td></tr></table>",
+            "block_bbox": [
+                427,
+                248,
+                3461,
+                2836
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    427.0,
+                    248.0
+                ],
+                [
+                    3461.0,
+                    248.0
+                ],
+                [
+                    3461.0,
+                    2836.0
+                ],
+                [
+                    427.0,
+                    2836.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "318",
+            "block_bbox": [
+                400,
+                2825,
+                491,
+                2879
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    400.0,
+                    2825.0
+                ],
+                [
+                    491.0,
+                    2825.0
+                ],
+                [
+                    491.0,
+                    2879.0
+                ],
+                [
+                    400.0,
+                    2879.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "319",
+            "block_bbox": [
+                3327,
+                2847,
+                3416,
+                2901
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    3327.0,
+                    2847.0
+                ],
+                [
+                    3416.0,
+                    2847.0
+                ],
+                [
+                    3416.0,
+                    2901.0
+                ],
+                [
+                    3327.0,
+                    2901.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.4511938989162445,
+                "coordinate": [
+                    646,
+                    171,
+                    1241,
+                    266
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        642.39453125,
+                        196.09567260742188
+                    ],
+                    [
+                        1237.538330078125,
+                        164.95437622070312
+                    ],
+                    [
+                        1241.304931640625,
+                        236.9375
+                    ],
+                    [
+                        646.1611328125,
+                        268.07879638671875
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9057813882827759,
+                "coordinate": [
+                    427,
+                    248,
+                    3461,
+                    2836
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        427.0,
+                        248.0
+                    ],
+                    [
+                        3461.0,
+                        248.0
+                    ],
+                    [
+                        3461.0,
+                        2836.0
+                    ],
+                    [
+                        427.0,
+                        2836.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7302278280258179,
+                "coordinate": [
+                    400,
+                    2825,
+                    491,
+                    2879
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        400.0,
+                        2825.0
+                    ],
+                    [
+                        491.0,
+                        2825.0
+                    ],
+                    [
+                        491.0,
+                        2879.0
+                    ],
+                    [
+                        400.0,
+                        2879.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7039840817451477,
+                "coordinate": [
+                    3327,
+                    2847,
+                    3416,
+                    2901
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        3327.0,
+                        2847.0
+                    ],
+                    [
+                        3416.0,
+                        2847.0
+                    ],
+                    [
+                        3416.0,
+                        2901.0
+                    ],
+                    [
+                        3327.0,
+                        2901.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

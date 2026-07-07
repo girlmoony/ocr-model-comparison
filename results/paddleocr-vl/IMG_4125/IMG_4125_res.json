@@ -1,0 +1,278 @@
+{
+    "input_path": "C:\\Users\\thatb\\OneDrive\\デスクトップ\\workspace\\github\\simple_apps\\tango-quest-pwa\\samples\\ocr\\IMG_4125.jpeg",
+    "page_index": null,
+    "page_count": null,
+    "width": 4032,
+    "height": 3024,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "2 Section 12 名詞編",
+            "block_bbox": [
+                835,
+                271,
+                1214,
+                353
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    830.0515747070312,
+                    296.3287658691406
+                ],
+                [
+                    1212.2318115234375,
+                    262.3572082519531
+                ],
+                [
+                    1218.583740234375,
+                    333.8147888183594
+                ],
+                [
+                    836.4034423828125,
+                    367.7863464355469
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>slavery[s]</td><td>奴隷制度；苦役☐slave 奴隷；とりこbe a slave to fashion 流行のとりこになっている☐slavish 奴隷のような</td><td>0800 Even before Lincoln, some politicians had tried to abolish slavery.</td><td>リンカーン以前にも，中には奴隸制限を広止することを試みた政治家もいた。</td></tr><tr><td>prey[pre]</td><td>獲物；犧牲者☒fall prey to ～～のえじきとなる☒(～を)捕食する，えじきにする(on)☒prey on the weak 弱者を食い物にする</td><td>Many types of animals hunt prey for food.</td><td>たくさんの種類の動物が食べるために獲物を狩る。</td></tr><tr><td>mess[mes]</td><td>散らかった状態[物]；混乱状態☐be in a mess 散らかっている；窮地に隔っている☒を散らかす，汚す☐mégss 散らかった；面倒な；不注意な</td><td>My parents had me clean up the mess in the living room.</td><td>私の両親は私に居間の散らかった物を片づけさせた。</td></tr><tr><td>recession[rɪˈsɛʃ(ə)n]</td><td>不況；後退☐be in (a[the]) recession 不況の中にある☐recéde 後退する；(記憶・可能性などか薄れる☐récess 休憩；休会；囲(学校の)休憩時間☐go into recess 休会に入る</td><td>Our country has not recovered from the economic recession yet.</td><td>我が国は経済不汚からまだ回復していない。</td></tr><tr><td>retreat[rɪˈtriːt]</td><td>後退，退却；（計画・決定などの）撤回☒後退[退却]する☐retreat into the country 田舎に引っ込んで暮らす</td><td>The military were forced to make a retreat from the enemy.</td><td>軍隊は敵陣から退却することを余儀なくされた。</td></tr><tr><td>grave[greɪv]</td><td>墓；(通例 the ～)死☒重大な；いかめしい☐a grave concern 重大な懸念☐graveぎゅう 墓地</td><td>Every time she returns home, she visits her grandmother&#x27;s grave.</td><td>故堀に戻るために彼女は祖母の墓にお参りする。</td></tr><tr><td>column[kə(ə)ləm]</td><td>コラム；(新聞などの)欄；円柱；(縦)列☐a column of smoke 立ちのぼる煙☐walk in a column 1 列縦隊で進む</td><td>She writes a newspaper column once a week.</td><td>彼女は週に1回新聞のコラムを書いている。</td></tr><tr><td>scenery[ˈsiːnəri]</td><td>(集合的に)景色；背景☐look at the picturesque scenery 絵のような景色を眺める☐scene 現場；(映画などの)場面；光景☐scenic 景色のよい；風景の</td><td>They had lunch on the balcony, with a view of the mountain scenery.</td><td>彼女は山の景色の展望がきくりレコニーで昼食をとった。</td></tr></table>",
+            "block_bbox": [
+                693,
+                298,
+                3477,
+                2728
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    693.0,
+                    298.0
+                ],
+                [
+                    3477.0,
+                    298.0
+                ],
+                [
+                    3477.0,
+                    2728.0
+                ],
+                [
+                    693.0,
+                    2728.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "316",
+            "block_bbox": [
+                673,
+                2730,
+                765,
+                2782
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    673.0,
+                    2730.0
+                ],
+                [
+                    765.0,
+                    2730.0
+                ],
+                [
+                    765.0,
+                    2782.0
+                ],
+                [
+                    673.0,
+                    2782.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "317",
+            "block_bbox": [
+                3396,
+                2715,
+                3476,
+                2761
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    3396.0,
+                    2715.0
+                ],
+                [
+                    3476.0,
+                    2715.0
+                ],
+                [
+                    3476.0,
+                    2761.0
+                ],
+                [
+                    3396.0,
+                    2761.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.5974193811416626,
+                "coordinate": [
+                    835,
+                    271,
+                    1214,
+                    353
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        830.0515747070312,
+                        296.3287658691406
+                    ],
+                    [
+                        1212.2318115234375,
+                        262.3572082519531
+                    ],
+                    [
+                        1218.583740234375,
+                        333.8147888183594
+                    ],
+                    [
+                        836.4034423828125,
+                        367.7863464355469
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9248546361923218,
+                "coordinate": [
+                    693,
+                    298,
+                    3477,
+                    2728
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        693.0,
+                        298.0
+                    ],
+                    [
+                        3477.0,
+                        298.0
+                    ],
+                    [
+                        3477.0,
+                        2728.0
+                    ],
+                    [
+                        693.0,
+                        2728.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7241876125335693,
+                "coordinate": [
+                    673,
+                    2730,
+                    765,
+                    2782
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        673.0,
+                        2730.0
+                    ],
+                    [
+                        765.0,
+                        2730.0
+                    ],
+                    [
+                        765.0,
+                        2782.0
+                    ],
+                    [
+                        673.0,
+                        2782.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6871217489242554,
+                "coordinate": [
+                    3396,
+                    2715,
+                    3476,
+                    2761
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        3396.0,
+                        2715.0
+                    ],
+                    [
+                        3476.0,
+                        2715.0
+                    ],
+                    [
+                        3476.0,
+                        2761.0
+                    ],
+                    [
+                        3396.0,
+                        2761.0
+                    ]
+                ]
+            }
+        ]
+    }
+}

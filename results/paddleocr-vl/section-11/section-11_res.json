@@ -1,0 +1,318 @@
+{
+    "input_path": "C:\\Users\\thatb\\OneDrive\\デスクトップ\\workspace\\github\\simple_apps\\tango-quest-pwa\\samples\\ocr\\section-11.jpg",
+    "page_index": null,
+    "page_count": null,
+    "width": 4032,
+    "height": 3024,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_layout_detection": true,
+        "use_chart_recognition": false,
+        "use_seal_recognition": false,
+        "use_ocr_for_image_block": false,
+        "format_block_content": false,
+        "merge_layout_blocks": true,
+        "markdown_ignore_labels": [
+            "number",
+            "footnote",
+            "header",
+            "header_image",
+            "footer",
+            "footer_image",
+            "aside_text"
+        ],
+        "return_layout_polygon_points": true
+    },
+    "parsing_res_list": [
+        {
+            "block_label": "header",
+            "block_content": "2 Section 11 動网",
+            "block_bbox": [
+                724,
+                135,
+                1137,
+                238
+            ],
+            "block_id": 0,
+            "block_order": null,
+            "group_id": 0,
+            "block_polygon_points": [
+                [
+                    716.43310546875,
+                    179.74456787109375
+                ],
+                [
+                    1134.6094970703125,
+                    124.47894287109375
+                ],
+                [
+                    1143.7138671875,
+                    193.36822509765625
+                ],
+                [
+                    725.5374755859375,
+                    248.63385009765625
+                ]
+            ]
+        },
+        {
+            "block_label": "table",
+            "block_content": "<table><tr><td>exclude [lɪskʌbl] ☐☐ 1009</td><td>を除外する(⇔ include ↔6)\\n☐ be excluded from ～「～から除外される」\\n☐ exclusion ☑ 除外\\n☐ exclusive ☑ 排他的な\\n☐ exclusively ☑ もっぱら</td><td rowspan=\"8\">800 Tax was excluded from the price.\\nHe overlooked some important facts during his research.\\nThe bubble economy in Japan burst in the 1990s.\\nThe therapist has healed many people with disease.\\nThe art museum forbids visitors from taking pictures inside the building.\\nYesterday, I installed some new apps on my smartphone.\\nThe counselor taught me some ways to diminish anxiety.\\nThe doctor cited the case of a man who survived five operations.</td><td>1500 税金は価格から海外されていた。</td></tr><tr><td>overlook [oʊvərˈlɒk] ☐☐ 1010</td><td>を見落とす；を大目に見る；を見渡す\\n▶ My room overlooks the sea. 私の部屋から海が見渡せる。</td><td>彼は研究の中でいくつかの重要な事実を再読とした。</td></tr><tr><td>burst [bɑːrst] ☐☐ 1011</td><td>破裂する；(～を)突然始める(into) ▶ 活用：burst - burst - burst ▶ burst into tears ねっと泣き出す(与 burst out crying 破裂；喷出\\n▶ a burst of applause 大喝采</td><td>日本のバブル経済は1980年代に増強した。</td></tr><tr><td>heal [hiːl] ☐☐ 1012</td><td>(人・傷など)を治す；治る\\n▶ 「自然の力や祈福を用いて病気の人を治す」の意。▶ heal him of his disease 彼の病気を治す\\n▶ héaler 図鑑やす人[物]</td><td>その治療士は大勢の病気にかかっている人々を治してきた。</td></tr><tr><td>forbid [fɔːbɪd] ☐☐ 1013</td><td>を禁じる(⇔ permit ⇔ 628)\\n▶ 活用：forbid - forbade - forbidden ▶ forbid ～&#x27;s doing 「～に…することを続ける」 (= forbid ~ to do, forbid ~ from doing)\\n▶ forbidden 禁じられた，禁断の</td><td>その美術館は来館者が館内で写真を撮ることを感じている。</td></tr><tr><td>install [ɪnstsl] ☐☐ 1014</td><td>をインストールする；を設置する；を就任させる\\n▶ install a security camera 防犯カメラを設置する\\n▶ installation 設取りつけ，設置</td><td>昨日私はスマートフォンに新しいアプリをいくつかインストールした。</td></tr><tr><td>diminish [dimɪnɪʃ] ☐☐ 1015</td><td>を減らす；減少する(⇔ décréase)\\n▶ diminish in size 缩小する</td><td>カウンセラーは私に不安を避らずためのいくつかの方法を教えてくれた。</td></tr><tr><td>cite [saɪt] ☐☐ 1016</td><td>を引き合いに出す；を引用する\\n▶ ある事柄を諦拠や参考例として挙げることを意味する。▶ cite biblical passages 聖書の章句を引用する\\n▶ citation 引用；表彰</td><td>医師は5度の手術を乗り越えた男性の事例を引き直し出した。</td></tr></table>",
+            "block_bbox": [
+                637,
+                107,
+                3836,
+                2840
+            ],
+            "block_id": 1,
+            "block_order": null,
+            "group_id": 1,
+            "block_polygon_points": [
+                [
+                    3532.0,
+                    258.0
+                ],
+                [
+                    3107.0,
+                    123.0
+                ],
+                [
+                    2743.0,
+                    107.0
+                ],
+                [
+                    2115.0,
+                    243.0
+                ],
+                [
+                    718.0,
+                    274.0
+                ],
+                [
+                    637.0,
+                    2839.0
+                ],
+                [
+                    3653.0,
+                    2719.0
+                ],
+                [
+                    3714.0,
+                    1648.0
+                ],
+                [
+                    3613.0,
+                    1345.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "278",
+            "block_bbox": [
+                638,
+                2879,
+                734,
+                2934
+            ],
+            "block_id": 2,
+            "block_order": null,
+            "group_id": 2,
+            "block_polygon_points": [
+                [
+                    638.0,
+                    2879.0
+                ],
+                [
+                    734.0,
+                    2879.0
+                ],
+                [
+                    734.0,
+                    2934.0
+                ],
+                [
+                    638.0,
+                    2934.0
+                ]
+            ]
+        },
+        {
+            "block_label": "number",
+            "block_content": "279",
+            "block_bbox": [
+                3591,
+                2748,
+                3673,
+                2807
+            ],
+            "block_id": 3,
+            "block_order": null,
+            "group_id": 3,
+            "block_polygon_points": [
+                [
+                    3591.0,
+                    2748.0
+                ],
+                [
+                    3673.0,
+                    2748.0
+                ],
+                [
+                    3673.0,
+                    2807.0
+                ],
+                [
+                    3591.0,
+                    2807.0
+                ]
+            ]
+        }
+    ],
+    "layout_det_res": {
+        "input_path": null,
+        "page_index": null,
+        "boxes": [
+            {
+                "cls_id": 12,
+                "label": "header",
+                "score": 0.7090094685554504,
+                "coordinate": [
+                    724,
+                    135,
+                    1137,
+                    238
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        716.43310546875,
+                        179.74456787109375
+                    ],
+                    [
+                        1134.6094970703125,
+                        124.47894287109375
+                    ],
+                    [
+                        1143.7138671875,
+                        193.36822509765625
+                    ],
+                    [
+                        725.5374755859375,
+                        248.63385009765625
+                    ]
+                ]
+            },
+            {
+                "cls_id": 21,
+                "label": "table",
+                "score": 0.9121524095535278,
+                "coordinate": [
+                    637,
+                    107,
+                    3836,
+                    2840
+                ],
+                "order": null,
+                "polygon_points": [
+                    [
+                        3532.0,
+                        258.0
+                    ],
+                    [
+                        3107.0,
+                        123.0
+                    ],
+                    [
+                        2743.0,
+                        107.0
+                    ],
+                    [
+                        2115.0,
+                        243.0
+                    ],
+                    [
+                        718.0,
+                        274.0
+                    ],
+                    [
+                        637.0,
+                        2839.0
+                    ],
+                    [
+                        3653.0,
+                        2719.0
+                    ],
+                    [
+                        3714.0,
+                        1648.0
+                    ],
+                    [
+                        3613.0,
+                        1345.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.7409387230873108,
+                "coordinate": [
+                    638,
+                    2879,
+                    734,
+                    2934
+                ],
+                "order": 1,
+                "polygon_points": [
+                    [
+                        638.0,
+                        2879.0
+                    ],
+                    [
+                        734.0,
+                        2879.0
+                    ],
+                    [
+                        734.0,
+                        2934.0
+                    ],
+                    [
+                        638.0,
+                        2934.0
+                    ]
+                ]
+            },
+            {
+                "cls_id": 16,
+                "label": "number",
+                "score": 0.6679274439811707,
+                "coordinate": [
+                    3591,
+                    2748,
+                    3673,
+                    2807
+                ],
+                "order": 2,
+                "polygon_points": [
+                    [
+                        3591.0,
+                        2748.0
+                    ],
+                    [
+                        3673.0,
+                        2748.0
+                    ],
+                    [
+                        3673.0,
+                        2807.0
+                    ],
+                    [
+                        3591.0,
+                        2807.0
+                    ]
+                ]
+            }
+        ]
+    }
+}
